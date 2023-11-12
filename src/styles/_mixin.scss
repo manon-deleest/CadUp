@@ -1,0 +1,115 @@
+@import 'src/styles/_variables.scss';
+
+
+@mixin button ($color: white, $background: $main-color) {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: $background;
+    color: $color;
+    font-size: 13px;
+    width: 200px;
+    cursor: pointer;
+    
+    @media (min-width: 330px) {
+        font-size: 16px;
+        padding: 15px 13px;
+    }
+
+    box-shadow: none;
+    border: none;
+
+    &:hover{
+        box-shadow: none;
+        border: none;
+    }
+}
+
+@mixin generale_container(){
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    margin: 5vw; 
+
+    @media (min-width: 900px) {
+        font-size: 25px;
+        font-weight: 700;
+        flex-direction: row;
+        width: 100vw;
+        margin: 0; 
+    }
+
+    &__infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 290px;
+        @media (min-width: 900px) {
+            width: calc(100vw - 350px);
+        }
+
+        @media (min-width: 1300px) {
+            width: calc(100vw - 800px);
+        }
+    }
+
+    &__titre{
+        font-size: 18px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        @media (min-width: 900px) {
+            font-size: 35px;
+            font-weight: 700;
+            width: 500px;
+        }
+    }
+
+    &__image{
+        height: 200px;
+        width: 90vw;
+
+        @media (min-width: 900px) {
+            width: 300px;
+            height: 450px;
+            margin-right: 50px;
+        }
+
+        @media (min-width: 1300px) {
+            width: 600px;
+            height: 450px;
+            margin-right: 100px;
+        }
+    }
+
+    &__texte{
+        font-size: 14px;
+        margin: 10px;
+        color:$black_light; 
+        line-height: 18px;
+        @media (min-width: 900px) {
+            font-size: 16px;
+            font-weight: 400;
+            margin: 20px;
+            max-width: 500px;
+        }
+    }
+    
+
+    &__carte{
+        height: 200px;
+        width: 90vw;
+
+        @media (min-width: 900px) {
+            width: 300px;
+            height: 450px;
+        }
+        @media (min-width: 1300px) {
+            width: 800px;
+            height: 450px;
+        }
+    }
+
+}

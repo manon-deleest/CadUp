@@ -1,0 +1,45 @@
+<section class="main">
+    <h3 class="main__titre">Contactez-nous</h3>
+    <p class="main__texte">Vous avez une question ? Vous souhaitez en savoir plus sur nos caddies connectés ? Vous souhaitez nous faire part de vos commentaires ? N’hésitez pas à nous contacter, nous serons ravis de vous répondre !</p>
+    
+    <div class="contact__container" *ngIf="form">
+        <form class="contact" [formGroup]="form" (ngSubmit)="onSend()">
+            <label class="form-input"> <span class="form-input__label">Nom*</span>
+                <input  value="" name="nom" formControlName="nom" id="nom" type="text" placeholder="Nom*" class="form-input__input">
+                <p *ngIf="form.get('nom')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre nom</p>
+            </label>
+            <label class="form-input"><span class="form-input__label">Prénom*</span>
+                <input  value="" name="prenom" formControlName="prenom" id="prenom" type="text" placeholder="Prénom*" class="form-input__input">
+                <p *ngIf="form.get('prenom')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre prénom</p>
+            </label>
+            <label class="form-input"><span class="form-input__label">Email*</span>
+                <input  value="" name="email" formControlName="email" id="email" type="email" placeholder="Email*" class="form-input__input">
+                <p *ngIf="form.get('email')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre email</p>
+            </label>
+            <!-- <label class="form-input"><span class="form-input__label">Téléphone</span>
+                <input  value="" name="telephone" formControlName="telephone" id="telephone" type="text" placeholder="Téléphone" class="form-input__input">
+            </label> -->
+            <label class="form-input"><span class="form-input__label">Message*</span>
+                <textarea value="" name="message" formControlName="message" id="message" rows="5" cols="100" class="form-input--message__input" placeholder="Message*"> </textarea>
+                <p *ngIf="form.get('message')?.hasError('required') && isSubmited"  class="form-input__error">Vous devez rensigner votre message</p>
+            </label>
+            <label class="form-input--checkbox">
+                <input  value="" name="checkbox" formControlName="checkbox" id="checkbox" type="checkbox">
+                En cochant cette case vous acceptez d être recontacté par l'équipe de CaddieUp. <br>
+                Les données sont conservées pour la bonne gestion du projet mais ne sont pas transmises à tiers.
+                <p *ngIf="form.get('checkbox')?.hasError('required') && isSubmited"  class="form-input__error">Vous devez accepter les conditions</p>
+            </label>
+                
+        
+            <button class="contact__button" type="submit">Soumettre</button>    
+        </form>
+        
+    
+        <section class="info">
+            <h2 class="info__titre">Formulaire de contact</h2>
+            <h3 class="info__texte">Envie de nous contacter ? Utilisez ce formulaire pour entrer en contact avec nous. Nous sommes prêts à répondre à vos questions </h3>
+        </section>
+        
+    </div>
+
+</section>

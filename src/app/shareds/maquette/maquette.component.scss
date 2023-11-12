@@ -1,0 +1,35 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+
+.maquette{
+    padding: 30px;
+    text-align: center;
+    background-color: $main-color-background;
+    @media (min-width: 900px) {
+        padding: 70px;
+    }
+    &__titre{
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+    &__sous-titre{
+        margin: 20px 0 ;
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+    &__button{
+        @include button(); 
+
+        font-size: 25px !important;
+        padding: 10px 30px !important;
+
+        @media (min-width: 900px) {
+            font-size: 30px !important;
+            padding: 30px 100px !important;
+        }
+    }
+
+
+}

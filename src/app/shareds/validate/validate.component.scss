@@ -1,0 +1,9 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+.message{
+    padding: 20px;
+    font-size: 20px;
+    color: $main-color;
+    font-weight: 600;
+}

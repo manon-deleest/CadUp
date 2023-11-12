@@ -1,0 +1,55 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+.newletter{
+    background-color: #1c1c1c;
+    color: white;
+    border-radius: 15px;
+    padding: 20px;
+    &__titre{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    &__button{
+        @include button(); 
+        background-color: $black;  
+        padding: 10px !important;
+        border-radius: 1px;
+    }
+
+    &__form{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    &__info{
+        color: $white;
+        font-size: 12px;
+    }
+}
+
+.form-input{
+    &--message{
+        width: 70vw;
+    }
+    &__label{
+        display: none;
+    }
+    &__input{
+        margin: 15px 0;
+        height: 15px;
+        width: 180px;
+        padding: 10px;
+        border-radius: 5px;
+        background-color: #313131;
+        border: none;
+        &::placeholder{
+            color: $white;
+        }
+    }
+
+}

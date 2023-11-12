@@ -1,0 +1,68 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+.header{
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 10%;
+    border-top: 10px solid $main-color;
+    
+    @media (min-width: 900px) {
+        padding: 70px;
+        padding-bottom: 10%;
+        flex-direction: row;
+        background-color: white;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 80%);
+    }
+    
+    &__image{
+        @media (min-width: 900px) {
+            width: 40vw;
+        }
+    }
+    &__droite{
+        @media (min-width: 900px) {
+            margin: 90px;
+        }
+        margin-bottom: 20px;
+    }
+    &__titre{
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 2px;
+        @media (min-width: 900px) {
+            color: black;
+        }
+    }
+    &__texte{
+        margin: 40px 0;
+        font-size: 16px;
+        line-height: 20px;
+        line-height: 25px;
+    }
+    &__button{
+        @include button(); 
+        width: 230px;
+    }
+}
+
+.shadow{
+    filter: drop-shadow(0 5mm 4mm rgba(0, 0, 0, 0.1));
+}
+
+.banniere{
+    opacity: 0 ;
+    @media (min-width: 900px) {
+        opacity: 1 ;
+        position: relative;
+        top: -167px;
+        clip-path: polygon(0 0, 0% 100%, 100% 0);
+        background-color: $main-color;
+        width: 100vw;
+        height: 20vh;
+        z-index: -4;
+    }
+}
+

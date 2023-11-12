@@ -1,0 +1,14 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+
+.warning{
+    width: 100vw;
+    text-align: center;
+    &__titre{
+        font-size: 40px;
+        color: $main-color;
+        font-weight: 40px;
+
+    }
+}

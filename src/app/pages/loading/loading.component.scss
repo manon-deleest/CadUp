@@ -1,0 +1,16 @@
+.loading{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    &__titre{
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+}
