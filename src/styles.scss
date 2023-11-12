@@ -40,4 +40,4 @@ $landding-page-theme: mat.define-light-theme((
 
 @import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Abel', sans-serif; }
+body { margin: 0; font-family: 'Abel', sans-serif; overflow-x: hidden;}

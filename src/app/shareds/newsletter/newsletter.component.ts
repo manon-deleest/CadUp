@@ -31,6 +31,7 @@ export class NewsletterComponent implements OnInit {
       const email = this.form?.value.email; 
       addDoc(collection(collecti, email, id),{email: email});
 
+      this._snackBar.open("Votre email a bien été enregistré, vous recevrez beintôt de nos nouvelles ! ", 'Super ! ');
       this.isSubmited = false; 
     }
   }

@@ -13,7 +13,7 @@ import { AboutComponent } from './pages/about/about.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { FunctionalityComponent } from './pages/functionality/functionality.component';
 import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 
 const routes: Routes = [
@@ -43,7 +43,7 @@ const routes: Routes = [
   },
   {
     path:'contact',
-    component: ContactComponent
+    component: ContactPageComponent
   }
 ];
 

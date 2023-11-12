@@ -21,7 +21,7 @@ export class LoadingComponent implements OnInit {
     // this.enregistrer(); 
     console.log('loading'); 
     // this._router.navigate(['about'])
-    setTimeout(() => this._router.navigate(['about']), 1400); 
+    setTimeout(() => this._router.navigate(['contact']), 1400); 
   }
 
   // enregistrer(){

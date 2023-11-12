@@ -37,6 +37,7 @@ import { BlogComponent } from './pages/blog/blog.component';
 import { FunctionalityComponent } from './pages/functionality/functionality.component';
 import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BenefitsComponent,
     BlogComponent,
     FunctionalityComponent,
-    MockUpsComponent
+    MockUpsComponent,
+    ContactPageComponent
   ],
   imports: [
     BrowserModule,

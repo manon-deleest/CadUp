@@ -1,0 +1,158 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+.header{
+    margin: 10px;
+    width: 90vw;
+    text-align: center;
+    line-height: 30px;
+    &__titre{
+        font-size: 30px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    &__texte{
+        font-size: 16px;
+    }
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    @media (min-width: 900px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.section--left{
+    width: 80vw;
+    background-color: $main-color;
+    border-radius: 10px;
+    color: $white;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    
+    &__button{
+        @include button();
+    }
+
+    @media (min-width: 900px) {
+        width: 40vw;
+        padding: 40px;
+        height: 450px;
+    }
+    &::before{
+        content: '';
+        width: 90px;
+        height: 90px;
+        position: absolute;
+        background-color: rgba(218, 218, 218, 0.8);
+        border-radius: 50%;
+        z-index: 1;
+        right: -20px;
+        bottom: -15px;
+    }
+    &::after{
+        content: '';
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        background-color: rgba(85, 85, 85, 0.947);
+        border-radius: 50%;
+        z-index: 1;
+        right: 40px;
+        bottom: 30px;
+    }
+    &__item{
+        color: $white;
+        font-size: 16px;
+        padding: 9px;  
+        height: 5px;
+        display: flex;
+        align-items: center;
+        @media (min-width: 900px) {
+            padding: 15px;  
+        }
+    }
+
+    &__titre{
+        font-size: 20px;
+        font-weight: 700;
+        font-family: 'Roboto', sans-serif;
+        padding: 10px 0 ;
+    }
+
+    &__liste{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 150px;
+    }
+
+    &__icon{
+        margin: 10px;
+    }
+
+}
+
+
+.form{
+    width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding : 5vw 0;
+    &-input{
+        padding: 0;
+        width: 100%;
+        @media(min-width: 600px){
+            width: 40%;
+            margin: 0 10px; 
+        }
+        &__label{
+            display: none;
+        }
+        &__input{
+            height: 15px;
+            width: 92%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #1BA8A83B;
+            border: none;
+            margin: 10px;
+        }
+
+        &--message{
+            padding: 0;
+            width: 82%;
+
+            &__input{
+                width: 100%;
+                padding: 10px;
+                border-radius: 5px;
+                background-color: #1BA8A83B;
+                border: none;
+                margin: 5px;
+                resize: none;
+            }
+        }
+
+        &--checkbox{
+            width: 92%;
+            margin: 5px;
+            color: grey;
+            font-size: 10px;
+        }
+
+        &__error{
+            color: red;
+        }
+    }
+}
