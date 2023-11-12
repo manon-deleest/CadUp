@@ -22,3 +22,9 @@
     @include generale_container(); 
 
 }
+
+.caddieUp{
+    @include generale_container();
+    flex-direction: column-reverse; 
+
+}
