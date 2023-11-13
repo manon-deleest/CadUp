@@ -12,7 +12,7 @@
     }
 
     &__texte{
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
     }
 }
 
@@ -84,7 +84,7 @@
     }
     &__item{
         color: $white;
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
         padding: 9px;  
         height: 5px;
         display: flex;
@@ -116,7 +116,7 @@
     }
 
     &__texte{
-        @include responsive-text(18, 33); 
+        @include responsive-text(18px, 33px); 
         padding: 10px 0 ;
     }
 
@@ -178,7 +178,7 @@
             width: 92%;
             margin: 5px;
             color: grey;
-            @include responsive-text(12); 
+            @include responsive-text(12px); 
             display: flex;
             position: relative;
             @media (min-width: 600px) {
@@ -186,15 +186,16 @@
             }
             &__texte{
                 margin-left: 30px;
-                &--image-before::before{
-                    content: "";
-                    width: 300px;
-                    height: 200px;
-                    background-image: url("/assets/letter_send.png");
-                    position: absolute;
-                    top: 20px;
+                @media (min-width: 600px) {
+                    &--image-before::before{
+                        content: "";
+                        width: 300px;
+                        height: 200px;
+                        background-image: url("/assets/letter_send.png");
+                        position: absolute;
+                        top: 20px;
+                    }
                 }
-
             }
         }
 

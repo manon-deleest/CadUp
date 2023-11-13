@@ -22,18 +22,18 @@
 
     &__titre{
         @include title-styles;
-        @include responsive-text(18 , 22); 
+        @include responsive-text(18px , 22px); 
         text-align: left;
         width: 100%;
     }
 
     &__texte{
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
     }
 
     &__link{
         color: $main-color;
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
         border: 1px solid $main-color;
         border-radius: 20px;
         padding: 5px 15px;

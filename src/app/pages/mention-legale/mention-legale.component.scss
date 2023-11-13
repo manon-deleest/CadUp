@@ -19,12 +19,12 @@
     }
     &__texte{
         margin: 20px 0;
-        @include responsive-text(16, 25); 
+        @include responsive-text(16px, 25px); 
     }
     &__sous-titre{
         font-weight: 900;
         color: $main-color;
-        @include responsive-text(25); 
+        @include responsive-text(25px); 
         letter-spacing: 2px;
     }
     &__button{

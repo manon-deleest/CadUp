@@ -41,6 +41,7 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { BlogTuileComponent } from './shareds/blog-tuile/blog-tuile.component';
 import { CommunHeaderComponent } from './shareds/commun-header/commun-header.component';
+import { BlogTuileLoadingComponent } from './shareds/blog-tuile-loading/blog-tuile-loading.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +73,8 @@ import { CommunHeaderComponent } from './shareds/commun-header/commun-header.com
     ContactPageComponent,
     BlogSingleComponent,
     BlogTuileComponent,
-    CommunHeaderComponent
+    CommunHeaderComponent,
+    BlogTuileLoadingComponent
   ],
   imports: [
     BrowserModule,

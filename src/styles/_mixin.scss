@@ -53,7 +53,8 @@
     }
 
     &__titre {
-        @include title-styles;
+        font-size: 16px;
+        font-weight: 600;
         font-family: "Roboto", sans-serif;
         @media (min-width: 900px) {
             font-size: 35px;
@@ -80,7 +81,7 @@
     }
 
     &__texte {
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
         margin: 10px;
         color: $black_light;
         @media (min-width: 900px) {

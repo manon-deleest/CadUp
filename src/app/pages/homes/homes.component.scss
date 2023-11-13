@@ -37,7 +37,7 @@
     }
     &__texte{
         margin: 40px 0;
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
     }
     &__button{
         @include button(); 

@@ -1,13 +1,21 @@
 <app-commun-header></app-commun-header>
 
-<section *ngIf="blogs" class="blog">
+<section *ngIf="blogs.length > 0" class="blog">
     <h1 class="blog__titre">Blog</h1>
     <ul class="blog__liste">
         <li *ngFor="let blog of blogs"  class="blog__item">
             <app-blog-tuile [blog]="blog"></app-blog-tuile>
         </li>
     </ul>
+</section>
 
+<section *ngIf="blogs.length == 0" class="blog">
+    <h1 class="blog__titre">Blog</h1>
+    <ul class="blog__liste">
+        <li class="blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+        <li class="blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+        <li class="blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+    </ul>
 </section>
 
 <app-contact></app-contact>

@@ -4,12 +4,12 @@
     
     <div class="contact__container" *ngIf="form">
         <form class="contact" [formGroup]="form" (ngSubmit)="onSend()">
-            <label class="form-input"> <span class="form-input__label">Nom*</span>
-                <input  value="" name="nom" formControlName="nom" id="nom" type="text" placeholder="Nom*" class="form-input__input">
+            <label class="form-input form-input--demi"> <span class="form-input__label">Nom*</span>
+                <input  value="" name="nom" formControlName="nom" id="nom" type="text" placeholder="Nom*" class="form-input__input form-input__input--demi">
                 <p *ngIf="form.get('nom')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre nom</p>
             </label>
-            <label class="form-input"><span class="form-input__label">Prénom*</span>
-                <input  value="" name="prenom" formControlName="prenom" id="prenom" type="text" placeholder="Prénom*" class="form-input__input">
+            <label class="form-input form-input--demi"><span class="form-input__label">Prénom*</span>
+                <input  value="" name="prenom" formControlName="prenom" id="prenom" type="text" placeholder="Prénom*" class="form-input__input form-input__input--demi">
                 <p *ngIf="form.get('prenom')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre prénom</p>
             </label>
             <label class="form-input"><span class="form-input__label">Email*</span>

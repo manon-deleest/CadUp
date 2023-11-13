@@ -3,7 +3,7 @@
         <strong *ngFor="let mot of blog.mots_cles">{{mot}}</strong>
     </p>
     <h2 class="blog__titre">{{blog.title}}</h2>
-    <span class="blog__date">{{blog.created_at |  date:'M/d/YYYY'}}</span>
+    <span class="blog__date">{{blog.created_at |  date:'dd/MM/YYYY'}}</span>
 
     <section class="blog__contain blog__contain--texte">
         <p class="blog__texte" [innerHTML]="blog.content" ></p>

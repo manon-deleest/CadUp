@@ -43,7 +43,7 @@
 
     &__texte{
         color: white;
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
         margin: 30px 100px;
         z-index: 100;
     }

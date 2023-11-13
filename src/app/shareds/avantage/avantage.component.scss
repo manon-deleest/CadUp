@@ -63,7 +63,7 @@
         &__texte{
             max-width: 450px;
             margin: 10px;
-            @include responsive-text(18, 25); 
+            @include responsive-text(18px, 25px); 
             @media (min-width: 900px) {
                 text-align: left;
                 margin: 0;

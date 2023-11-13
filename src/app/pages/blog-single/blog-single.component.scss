@@ -36,7 +36,7 @@
     }
 
     &__texte{
-        @include responsive-text(16, 20); 
+        @include responsive-text(16px, 20px); 
         line-height: 25px;
         @media (min-width: 900px) {
             margin-right: 100px;

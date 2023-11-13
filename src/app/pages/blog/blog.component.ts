@@ -10,12 +10,15 @@ import { BlogService } from 'src/app/sevices/blog.service';
 export class BlogComponent implements OnInit {
 
   blogs: Blog[] = []; 
+  temp: Blog[] = []; 
 
   constructor(private blogService : BlogService) { }
 
   async ngOnInit(): Promise<void> {
-    this.blogs = await this.blogService.get_all_blogs();  
-
+    this.temp = await this.blogService.get_all_blogs();  
+    setTimeout(async () => {
+      this.blogs = this.temp; 
+    }, 1000);
   }
 
 }
