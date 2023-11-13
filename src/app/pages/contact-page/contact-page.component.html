@@ -6,6 +6,7 @@
 <main class="main" *ngIf="form">
     <section class="section--left">
         <h2 class="section--left__titre">Formulaire de contact</h2>
+        <p class="section--left__texte">Lorem Ipsum is simply dummy text <br> of the printing and typesetting industry.</p>
         <ul class="section--left__liste">
             <li><a href="tel:+33 5 54 97 99 99" class="section--left__item">
                     <svg class="section--left__icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -68,14 +69,13 @@
         </label>
         <label class="form-input--checkbox">
             <input value="" name="checkbox" formControlName="checkbox" id="checkbox" type="checkbox">
-            En cochant cette case vous acceptez d être recontacté par l'équipe de CaddieUp. <br>
-            Les données sont conservées pour la bonne gestion du projet mais ne sont pas transmises à tiers.
+            <p class="form-input--checkbox__texte">En cochant cette case vous acceptez d être recontacté par l'équipe de CaddieUp. <br>
+            Les données sont conservées pour la bonne gestion du projet mais ne sont pas transmises à tiers.</p>
             <p *ngIf="form.get('checkbox')?.hasError('required') && isSubmited" class="form-input__error">Vous devez
                 accepter les conditions</p>
         </label>
 
-
-        <button class="section--left__button" type="submit">Envoyer un message</button>
+        <button class="form__button" type="submit">Envoyer un message</button>
         
     </form>
 </main>

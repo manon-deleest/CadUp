@@ -102,6 +102,10 @@
                 padding: 15px;
                 border-radius: 30px;
                 font-weight: 600;
+
+                &--active{
+                    background-color: $black_light;                
+                }
             }
         }
     }
