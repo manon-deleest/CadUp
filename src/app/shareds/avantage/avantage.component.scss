@@ -9,8 +9,7 @@
         padding: 70px;
     }
     &__titre{
-        font-weight: 900;
-        font-size: 30px;
+        @include title-styles;
         letter-spacing: 2px;
     }
     &__sous-titre{
@@ -42,7 +41,7 @@
         border-radius: 20px;
         @media (min-width: 900px) {
             display: flex;
-            box-shadow: none;
+            @include box-shadow-none; 
             padding: 20px 0 ;
             margin: 0;
         }
@@ -51,10 +50,9 @@
             width: 80px;
         }
         &__titre{
+            @include title-styles;
             text-transform: uppercase;
-            font-size: 22px;
             margin: 10px;
-            font-weight: 500;
             line-height: 25px;
             @media (min-width: 900px) {
                 text-align: left;
@@ -65,8 +63,7 @@
         &__texte{
             max-width: 450px;
             margin: 10px;
-            font-size: 18px;
-            line-height: 25px;
+            @include responsive-text(18, 25); 
             @media (min-width: 900px) {
                 text-align: left;
                 margin: 0;

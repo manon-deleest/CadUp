@@ -6,9 +6,8 @@
     width: 100vw;
     text-align: center;
     &__titre{
-        font-size: 40px;
+        @include title-styles;
         color: $main-color;
-        font-weight: 40px;
 
     }
 }

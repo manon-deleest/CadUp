@@ -11,7 +11,7 @@
         box-shadow: 0px 2px 14px 0px #2A2A2A3D;
         @media (min-width: 900px) {
             background-color: $white_dark;
-            box-shadow: none;
+            @include box-shadow-none; 
             height: 450px;
         }
     }

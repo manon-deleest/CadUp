@@ -29,8 +29,7 @@
         margin-bottom: 20px;
     }
     &__titre{
-        font-weight: 900;
-        font-size: 30px;
+        @include title-styles;
         letter-spacing: 2px;
         @media (min-width: 900px) {
             color: black;
@@ -38,9 +37,7 @@
     }
     &__texte{
         margin: 40px 0;
-        font-size: 16px;
-        line-height: 20px;
-        line-height: 25px;
+        @include responsive-text(16, 20); 
     }
     &__button{
         @include button(); 

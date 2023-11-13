@@ -22,9 +22,8 @@
 
     &__titre{
         width: 85.5vw;
-        font-size: 35px;
-        font-weight: 600;
         padding: 30px; 
+        @include title-styles;
     }
 }
 
@@ -54,8 +53,7 @@
     }
 
     &__titre{
-        font-weight: 900;
-        font-size: 30px;
+        @include title-styles;
         letter-spacing: 2px;
         color: white;
         z-index: 100;
@@ -64,7 +62,7 @@
 
     &__texte{
         color: white;
-        font-size: 16px;  
+        @include responsive-text(16, 20); 
         margin: 30px 100px;
         z-index: 100;
     }

@@ -99,8 +99,7 @@
     }
 
     &__titre{
-        font-weight: 900;
-        font-size: 30px;
+        @include title-styles;
         letter-spacing: 2px;
         color: white;
         z-index: 100;
@@ -108,7 +107,7 @@
 
     &__texte{
         color: white;
-        font-size: 16px;  
+        @include responsive-text(16, 20); 
         margin: 30px 100px;
         z-index: 100;
         text-align: center;
@@ -122,8 +121,7 @@
     }
 
     &__titre{
-        font-weight: 900;
-        font-size: 30px;
+        @include title-styles;
         letter-spacing: 2px;
         z-index: 100;
         margin: 15px 0 ;

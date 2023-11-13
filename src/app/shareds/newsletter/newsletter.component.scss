@@ -7,7 +7,7 @@
     border-radius: 15px;
     padding: 20px;
     &__titre{
-        font-size: 18px;
+        @include responsive-text(18, 22); 
         font-weight: 600;
     }
 
@@ -29,7 +29,7 @@
 
     &__info{
         color: $white;
-        font-size: 12px;
+        @include responsive-text(12, 16); 
     }
 }
 

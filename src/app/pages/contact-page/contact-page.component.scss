@@ -7,13 +7,12 @@
     text-align: center;
     line-height: 30px;
     &__titre{
-        font-size: 30px;
-        font-weight: 700;
+        @include title-styles;
         font-family: 'Roboto', sans-serif;
     }
 
     &__texte{
-        font-size: 16px;
+        @include responsive-text(16, 20); 
     }
 }
 
@@ -85,7 +84,7 @@
     }
     &__item{
         color: $white;
-        font-size: 16px;
+        @include responsive-text(16, 20); 
         padding: 9px;  
         height: 5px;
         display: flex;
@@ -96,8 +95,7 @@
     }
 
     &__titre{
-        font-size: 28px;
-        font-weight: 700;
+        @include title-styles;
         font-family: 'Roboto', sans-serif;
         padding: 10px 0 ;
     }
@@ -118,8 +116,7 @@
     }
 
     &__texte{
-        font-size: 20px;
-        line-height: 35px;
+        @include responsive-text(18, 33); 
         padding: 10px 0 ;
     }
 
@@ -181,12 +178,11 @@
             width: 92%;
             margin: 5px;
             color: grey;
-            font-size: 10px;
+            @include responsive-text(12); 
             display: flex;
             position: relative;
             @media (min-width: 600px) {
                 width:80%;
-                font-size: 14px;
             }
             &__texte{
                 margin-left: 30px;

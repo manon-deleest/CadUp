@@ -13,21 +13,18 @@
         background-color: white;
     }
     &__titre{
-        font-weight: 900;
+        @include title-styles;
         color: $main-color;
-        font-size: 30px;
         letter-spacing: 2px;
     }
     &__texte{
         margin: 20px 0;
-        font-size: 16px;
-        line-height: 20px;
-        line-height: 25px;
+        @include responsive-text(16, 25); 
     }
     &__sous-titre{
         font-weight: 900;
         color: $main-color;
-        font-size: 25px;
+        @include responsive-text(25); 
         letter-spacing: 2px;
     }
     &__button{

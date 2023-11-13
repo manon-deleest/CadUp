@@ -21,19 +21,19 @@
     }
 
     &__titre{
-        font-size: 18px;
-        font-weight: bold;
+        @include title-styles;
+        @include responsive-text(18 , 22); 
         text-align: left;
         width: 100%;
     }
 
     &__texte{
-        font-size: 16px;
+        @include responsive-text(16, 20); 
     }
 
     &__link{
         color: $main-color;
-        font-size: 16px;
+        @include responsive-text(16, 20); 
         border: 1px solid $main-color;
         border-radius: 20px;
         padding: 5px 15px;

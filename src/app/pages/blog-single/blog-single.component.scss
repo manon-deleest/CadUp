@@ -25,9 +25,8 @@
     }
 
     &__titre{
+        @include title-styles;
         width: 85vw;
-        font-size: 35px;
-        font-weight: 600;
         padding: 30px 0
     }
 
@@ -37,7 +36,7 @@
     }
 
     &__texte{
-        font-size: 18px;
+        @include responsive-text(16, 20); 
         line-height: 25px;
         @media (min-width: 900px) {
             margin-right: 100px;
@@ -64,8 +63,7 @@
 
 .other-blog{
     &__titre{
-        font-size: 35px;
-        font-weight: 600;
+        @include title-styles;
         padding: 30px 7vw;
     }
     &__liste{
