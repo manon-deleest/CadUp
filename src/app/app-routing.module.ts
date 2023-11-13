@@ -14,6 +14,8 @@ import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { FunctionalityComponent } from './pages/functionality/functionality.component';
 import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { BlogComponent } from './pages/blog/blog.component';
+import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 
 
 const routes: Routes = [
@@ -39,7 +41,16 @@ const routes: Routes = [
   },
   {
     path:'blog',
-    component: AboutComponent
+    children: [
+      {
+        path: '',
+        component: BlogComponent
+      }, 
+      {
+        path: ':id',
+        component: BlogSingleComponent
+      }
+    ]
   },
   {
     path:'contact',

@@ -16,9 +16,6 @@
                 <input  value="" name="email" formControlName="email" id="email" type="email" placeholder="Email*" class="form-input__input">
                 <p *ngIf="form.get('email')?.hasError('required') && isSubmited" class="form-input__error">Vous devez rensigner votre email</p>
             </label>
-            <!-- <label class="form-input"><span class="form-input__label">Téléphone</span>
-                <input  value="" name="telephone" formControlName="telephone" id="telephone" type="text" placeholder="Téléphone" class="form-input__input">
-            </label> -->
             <label class="form-input"><span class="form-input__label">Message*</span>
                 <textarea value="" name="message" formControlName="message" id="message" rows="5" cols="100" class="form-input--message__input" placeholder="Message*"> </textarea>
                 <p *ngIf="form.get('message')?.hasError('required') && isSubmited"  class="form-input__error">Vous devez rensigner votre message</p>
@@ -30,6 +27,9 @@
                 <p *ngIf="form.get('checkbox')?.hasError('required') && isSubmited"  class="form-input__error">Vous devez accepter les conditions</p>
             </label>
                 
+            <label class="form-input--checkbox">
+                <input value="" name="newsletter" formControlName="newsletter" id="newsletter" type="checkbox">Je souhaite m'inscrire à la NewsLetter
+            </label>
         
             <button class="contact__button" type="submit">Soumettre</button>    
         </form>

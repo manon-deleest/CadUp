@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { Firestore, collectionData, collection, setDoc, doc, addDoc  } from '@angular/fire/firestore';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { ContactService } from 'src/app/sevices/contact.service';
 
 
 @Component({
@@ -14,9 +15,9 @@ export class NewsletterComponent implements OnInit {
   form: FormGroup | undefined;
   isSubmited: boolean = false
   constructor(
-    private db: Firestore,
     private fb: FormBuilder,
     private _snackBar: MatSnackBar,
+    private contactService: ContactService,
   ) { }
 
   ngOnInit(): void {
@@ -26,10 +27,7 @@ export class NewsletterComponent implements OnInit {
   saveData(){
     this.isSubmited = true; 
     if(this.form?.valid){
-      const collecti = collection(this.db, 'newsletter');
-      const id = new Date().getTime().toString(); 
-      const email = this.form?.value.email; 
-      addDoc(collection(collecti, email, id),{email: email});
+      this.contactService.add_newsletter(this.form?.value.email); 
 
       this._snackBar.open("Votre email a bien été enregistré, vous recevrez beintôt de nos nouvelles ! ", 'Super ! ');
       this.isSubmited = false; 

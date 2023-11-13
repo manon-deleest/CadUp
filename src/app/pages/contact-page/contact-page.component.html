@@ -74,6 +74,11 @@
             <p *ngIf="form.get('checkbox')?.hasError('required') && isSubmited" class="form-input__error">Vous devez
                 accepter les conditions</p>
         </label>
+        
+        <label class="form-input--checkbox">
+            <input value="" name="newsletter" formControlName="newsletter" id="newsletter" type="checkbox">
+            <p class="form-input--checkbox__texte">Je souhaite m'inscrire à la NewsLetter</p>
+        </label>
 
         <button class="form__button" type="submit">Envoyer un message</button>
         

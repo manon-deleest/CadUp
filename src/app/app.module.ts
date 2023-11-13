@@ -38,6 +38,7 @@ import { FunctionalityComponent } from './pages/functionality/functionality.comp
 import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
     BlogComponent,
     FunctionalityComponent,
     MockUpsComponent,
-    ContactPageComponent
+    ContactPageComponent,
+    BlogSingleComponent
   ],
   imports: [
     BrowserModule,
