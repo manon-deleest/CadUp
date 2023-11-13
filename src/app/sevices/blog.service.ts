@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Firestore, collection, doc, getDoc, getDocs } from '@angular/fire/firestore';
+import { Firestore, collection, doc, getDoc, getDocs, query, where } from '@angular/fire/firestore';
 import { Blog } from '../models/blog';
 import { get } from '@angular/fire/database';
 
@@ -10,20 +10,22 @@ export class BlogService {
 
   constructor(private db: Firestore) { }
 
+  startOfDay = new Date(); 
   collecti = collection(this.db, 'Blog');
-
+  queryDate = query(this.collecti, where("Date", "<", this.startOfDay)); 
   // Récupérer tous les obget blog dans firebase 
   get_all_blogs(){
     let blogs : Blog[] = [];
-
-    getDocs(this.collecti).then((docs) => {
+    
+    getDocs(this.queryDate).then((docs) => {
       docs.docs.forEach((doc) => {
         let blog : Blog = Blog.fromFirebase(doc);
-        blogs.push(blog);
+        if(blog.created_at < this.startOfDay){
+          blogs.push(blog);
+        }
       });
-    }); 
+    });
 
-    console.log(blogs);
     return blogs;
   }
 
@@ -43,7 +45,7 @@ export class BlogService {
   get_tree_blogs(id: string){
     let blogs : Blog[] = [];
 
-    getDocs(this.collecti).then((docs) => {
+    getDocs(this.queryDate).then((docs) => {
       docs.docs.forEach((doc) => {
         if(blogs.length < 3 && doc.id != id){
           let blog : Blog = Blog.fromFirebase(doc);

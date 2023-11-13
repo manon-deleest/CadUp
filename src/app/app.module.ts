@@ -40,6 +40,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { BlogTuileComponent } from './shareds/blog-tuile/blog-tuile.component';
+import { CommunHeaderComponent } from './shareds/commun-header/commun-header.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { BlogTuileComponent } from './shareds/blog-tuile/blog-tuile.component';
     MockUpsComponent,
     ContactPageComponent,
     BlogSingleComponent,
-    BlogTuileComponent
+    BlogTuileComponent,
+    CommunHeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -11,10 +11,9 @@
     &__titre{
         @include title-styles;
         letter-spacing: 2px;
-    }
-    &__sous-titre{
-        margin: 20px 0 ;
-        font-size: 20px;
+        width: 100%;
+        padding: 0 50px;
+        text-align: left;
     }
     &__containt{
         display: flex;

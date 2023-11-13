@@ -74,10 +74,8 @@
         align-items: center;
     }
     &__item{
-        width: 90vw;
-        margin: 20px 0;
-        @media (min-width: 900px) {
-            width: 25vw;
-        }
+        width: 100%;
+        max-width: 400px;
+        margin: 20px;
     }
 }

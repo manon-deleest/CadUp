@@ -24,7 +24,7 @@ export class Blog {
             data.get('Texte'),
             data.get('Image').split(','),
             new Date(data.get('Date').toDate()),
-            data.get('Texte').substring(0, 300) + '...',
+            data.get('Texte').substring(0, 150) + '...',
             data.get('motCle').split(',')
         );
     }
