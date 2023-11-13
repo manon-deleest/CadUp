@@ -55,6 +55,18 @@ const routes: Routes = [
   {
     path:'contact',
     component: ContactPageComponent
+  },{
+    path: 'mention-legale',
+    component: MentionLegaleComponent
+  },{
+    path: 'politique-confidentielle',
+    component: PolitiqueConfidentialiteComponent
+  },{
+    path: 'CGU',
+    component: CGUComponent
+  },{
+    path: 'CGV',
+    component: CGVComponent
   }
 ];
 
