@@ -1,0 +1,8 @@
+<figure *ngIf="blog" class="blog-tuile">
+    <img [src]="blog.image[0]" [alt]="blog.image[0]"  class="blog-tuile__image"/>
+    <figcaption class="blog-tuile__contain">
+        <h3 class="blog-tuile__titre">{{blog.title}}</h3>
+        <p class="blog-tuile__texte" [innerHTML]="blog.short_content"></p>
+        <a [routerLink]="'/blog/'+blog.id" class="blog-tuile__link">Lire la suite</a>
+    </figcaption>
+</figure>

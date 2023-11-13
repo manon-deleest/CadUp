@@ -21,20 +21,20 @@ export class LoadingComponent implements OnInit {
     // this.enregistrer(); 
     console.log('loading'); 
     // this._router.navigate(['about'])
-    setTimeout(() => this._router.navigate(['about']), 1400); 
+    setTimeout(() => this._router.navigate(['blog']), 1400); 
   }
 
-  enregistrer(){
-    const dateNow = new Date(); 
-    const collecti = collection(this.db, 'acceSite');
-    let uniqK : string = ""; 
-    if(localStorage.getItem('Uniqk') != '' && localStorage.getItem('Uniqk') != null){
-      uniqK = localStorage.getItem('Uniqk')!; 
-    }else{
-      uniqK = Math.random().toString(16).slice(2); 
-      localStorage.setItem('Uniqk', uniqK);
-    }
-    addDoc(collection(collecti, uniqK, dateNow.toString()),{date: dateNow, uniqK: uniqK});
-  }
+  // enregistrer(){
+  //   const dateNow = new Date(); 
+  //   const collecti = collection(this.db, 'acceSite');
+  //   let uniqK : string = ""; 
+  //   if(localStorage.getItem('Uniqk') != '' && localStorage.getItem('Uniqk') != null){
+  //     uniqK = localStorage.getItem('Uniqk')!; 
+  //   }else{
+  //     uniqK = Math.random().toString(16).slice(2); 
+  //     localStorage.setItem('Uniqk', uniqK);
+  //   }
+  //   addDoc(collection(collecti, uniqK, dateNow.toString()),{date: dateNow, uniqK: uniqK});
+  // }
 
 }

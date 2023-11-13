@@ -39,6 +39,7 @@ import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
+import { BlogTuileComponent } from './shareds/blog-tuile/blog-tuile.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +69,8 @@ import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
     FunctionalityComponent,
     MockUpsComponent,
     ContactPageComponent,
-    BlogSingleComponent
+    BlogSingleComponent,
+    BlogTuileComponent
   ],
   imports: [
     BrowserModule,

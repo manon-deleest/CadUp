@@ -1,0 +1,71 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+
+.blog{
+    width: 90vw;
+    padding: 0 5vw;
+
+    &__liste {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        width: 100%;
+        align-items: center;
+    }
+    
+    &__item{
+        width: 100%;
+        max-width: 350px;
+        margin: 20px;
+    }
+
+    &__titre{
+        width: 85.5vw;
+        font-size: 35px;
+        font-weight: 600;
+        padding: 30px; 
+    }
+}
+
+.header{
+    display: none;
+    width: 90vw;
+    margin: 10px 5vw;
+    height: 300px;
+    background-color: $main-color;
+    background-image: url('/assets/caddieUp.png');
+    border-radius: 20px;
+    position: relative;
+    &::after{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        content: '';
+        background-color: rgba(27, 168, 168,0.8);
+        border-radius:20px;
+    }
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    
+    @media (min-width: 900px) {
+        display: flex;
+    }
+
+    &__titre{
+        font-weight: 900;
+        font-size: 30px;
+        letter-spacing: 2px;
+        color: white;
+        z-index: 100;
+        margin: 30px 100px;
+    }
+
+    &__texte{
+        color: white;
+        font-size: 16px;  
+        margin: 30px 100px;
+        z-index: 100;
+    }
+}

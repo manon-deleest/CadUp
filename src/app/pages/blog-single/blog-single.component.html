@@ -1,1 +1,27 @@
-<p>blog-single works!</p>
+<main *ngIf="blog" class="blog">
+    <p class="blog__mot-cle">
+        <strong *ngFor="let mot of blog.mots_cles">{{mot}}</strong>
+    </p>
+    <h2 class="blog__titre">{{blog.title}}</h2>
+    <span class="blog__date">{{blog.created_at |  date:'M/d/YYYY'}}</span>
+
+    <section class="blog__contain blog__contain--texte">
+        <p class="blog__texte" [innerHTML]="blog.content" ></p>
+    </section>
+
+    <section class="blog__contain">
+        <img *ngFor="let image of blog.image" [src]="image" [alt]="image"  class="blog__image">
+    </section>
+
+</main>
+
+<section class="other-blog">
+    <h4 class="other-blog__titre">Nos autres articles </h4>
+    <ul class="other-blog__liste">
+        <li *ngFor="let blog of blogs" class="other-blog__item">
+            <app-blog-tuile [blog]="blog"></app-blog-tuile>
+        </li>
+    </ul>
+</section>
+
+<app-contact></app-contact>
