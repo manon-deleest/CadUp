@@ -4,7 +4,7 @@
 
 .map{
     @include generale_container(); 
-        flex-direction: column-reverse; 
+    flex-direction: column-reverse; 
 
     &__infos{
         background-color: $white;
@@ -17,7 +17,6 @@
     }
 
 }
-
 
 .partenaire{
     @include generale_container(); 
@@ -132,8 +131,6 @@
         }
     }
 }
-
-
 
 .avantage-item:first-child .avantage-item__texte::after{
     background-image: url('/assets/avantage/img1.png');
