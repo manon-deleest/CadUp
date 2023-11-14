@@ -11,7 +11,6 @@ import { BlogService } from 'src/app/sevices/blog.service';
 export class BlogSingleComponent implements OnInit {
 
   blog? : Blog ; 
-  blogs: Blog[] = [];
   id : string | null = null;
   constructor(private _activatedRouter: ActivatedRoute, private blogService: BlogService) {
     _activatedRouter.params.subscribe((params) => {
@@ -21,19 +20,12 @@ export class BlogSingleComponent implements OnInit {
    }
 
   async ngOnInit(): Promise<void> {
-
     this.id = this._activatedRouter.snapshot.paramMap.get('id');
-    
-
   }
 
   async getBlogs(){ 
     if(this.id == null) return;
-
     this.blog = await this.blogService.get_blog_by_id(this.id!); 
-    console.log(this.blog); 
-     
-    this.blogs = await this.blogService.get_tree_blogs(this.id!);  
   }
 
 

@@ -29,8 +29,6 @@ import { PolitiqueConfidentialiteComponent } from './pages/politique-confidentia
 import { CGUComponent } from './pages/cgu/cgu.component';
 import { CGVComponent } from './pages/cgv/cgv.component';
 import { PageAvantageComponent } from './pages/page-avantage/page-avantage.component';
-import { PageFonctionnaliteComponent } from './pages/page-fonctionnalite/page-fonctionnalite.component';
-import { PagesFonctionnaliteComponent } from './pages/pages-fonctionnalite/pages-fonctionnalite.component';
 import { AboutComponent } from './pages/about/about.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { BlogComponent } from './pages/blog/blog.component';
@@ -42,6 +40,7 @@ import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { BlogTuileComponent } from './shareds/blog-tuile/blog-tuile.component';
 import { CommunHeaderComponent } from './shareds/commun-header/commun-header.component';
 import { BlogTuileLoadingComponent } from './shareds/blog-tuile-loading/blog-tuile-loading.component';
+import { PreviewBlogComponent } from './shareds/preview-blog/preview-blog.component';
 
 @NgModule({
   declarations: [
@@ -63,8 +62,6 @@ import { BlogTuileLoadingComponent } from './shareds/blog-tuile-loading/blog-tui
     CGUComponent,
     CGVComponent,
     PageAvantageComponent,
-    PageFonctionnaliteComponent,
-    PagesFonctionnaliteComponent,
     AboutComponent,
     BenefitsComponent,
     BlogComponent,
@@ -74,7 +71,8 @@ import { BlogTuileLoadingComponent } from './shareds/blog-tuile-loading/blog-tui
     BlogSingleComponent,
     BlogTuileComponent,
     CommunHeaderComponent,
-    BlogTuileLoadingComponent
+    BlogTuileLoadingComponent,
+    PreviewBlogComponent
   ],
   imports: [
     BrowserModule,

@@ -42,7 +42,7 @@ export class BlogService {
     return blog;
   }
 
-  get_tree_blogs(id: string){
+  get_tree_blogs(id: string = '0'){
     let blogs : Blog[] = [];
 
     getDocs(this.queryDate).then((docs) => {

@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'landding-page';
   isLoading: boolean | undefined;
-
+  
   constructor(
     private _router: Router
   ) {}

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Blog } from 'src/app/models/blog';
+import { BlogService } from 'src/app/sevices/blog.service';
 
 @Component({
   selector: 'app-benefits',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BenefitsComponent implements OnInit {
 
-  constructor() { }
+
+  constructor(private blogService: BlogService) { }
 
   ngOnInit(): void {
+    
   }
+
 
 }

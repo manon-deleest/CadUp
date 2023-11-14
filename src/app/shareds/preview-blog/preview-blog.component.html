@@ -1,0 +1,18 @@
+
+<section class="other-blog" *ngIf="blogs.length > 0">
+    <h4 class="other-blog__titre">{{title}} </h4>
+    <ul class="other-blog__liste">
+        <li *ngFor="let blog of blogs" class="other-blog__item">
+            <app-blog-tuile [blog]="blog"></app-blog-tuile>
+        </li>
+    </ul>
+</section>
+
+<section *ngIf="blogs.length == 0" class="other-blog">
+    <h4 class="other-blog__titre">{{title}} </h4>
+    <ul class="other-blog__liste">
+        <li class="other-blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+        <li class="other-blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+        <li class="other-blog__item"><app-blog-tuile-loading></app-blog-tuile-loading></li>
+    </ul>
+</section>

@@ -29,3 +29,123 @@
     flex-direction: column-reverse; 
 
 }
+
+.avantage{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    margin: 5vw 0;
+
+    &__titre {
+        font-size: 28px;
+        font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        background-color: $main-color;
+        color: $white;
+        width: 100%;
+        padding: 50px 0;
+        text-align: center;
+        @media (min-width: 1100px) {
+            font-size: 35px;
+            width: 500px;
+            color: $black;
+            background-color: $white;
+            padding: 0;
+        }
+
+    }
+
+    &__texte {
+        @include responsive-text(16px, 20px); 
+        color: $black_light;
+        font-weight: 400;
+        margin: 20px;
+        max-width: 500px;
+        text-align: center;
+        display: none;
+        @media (min-width: 1100px) {
+            display: block;
+        }
+    }
+
+    &__liste{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 30px;
+        width: 100vw;
+        @media (min-width: 900px) {
+            width: 95vw;
+            row-gap: 30px;
+        }
+    }
+
+    &-item{
+        width: 80vw; 
+        padding: 50px;
+        position: relative;
+
+        &:nth-child(even){
+            background-color: #D3F0F0;
+        }
+
+        @media (min-width: 1100px) {
+            max-width: 400px;
+            // box-shadow: 0px 2px 14px 0px #2A2A2A3D;
+            background-color: $white;
+            height: 150px;
+            &:nth-child(even){
+                background-color: $white;
+            }
+        }
+        
+        @media (min-width: 1600px) {
+            max-width: 500px;
+        }
+
+        &__titre{
+            width: 70%;
+            @include responsive-text(23px, 30px); 
+            font-weight: 600;
+            font-family: "Roboto", sans-serif;
+        }
+
+        &__texte{
+            margin-top: 30px;
+            width: 60%;
+            @include responsive-text(16px, 20px); 
+            &::after{
+                content:''; 
+                width: 200px;
+                height: 200px;
+                display: block;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: right bottom;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+
+
+.avantage-item:first-child .avantage-item__texte::after{
+    background-image: url('/assets/avantage/img1.png');
+}
+.avantage-item:nth-child(2n) .avantage-item__texte::after{
+    background-image: url('/assets/avantage/img2.png');
+}
+.avantage-item:nth-child(3n) .avantage-item__texte::after{
+    background-image: url('/assets/avantage/img3.png');
+}
+.avantage-item:nth-child(4n) .avantage-item__texte::after{
+    background-image: url('/assets/avantage/img4.png');
+    height: 150px;
+}
+ 

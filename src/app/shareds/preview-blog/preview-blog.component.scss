@@ -1,0 +1,22 @@
+@import 'src/styles/_variables.scss';
+@import 'src/styles/_mixin.scss';
+
+.other-blog{
+    &__titre{ 
+        font-size: 40px;
+        font-weight: 600;
+        padding: 30px 7vw;
+    }
+    &__liste{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+        align-items: center;
+    }
+    &__item{
+        width: 100%;
+        max-width: 400px;
+        margin: 20px;
+    }
+}
