@@ -26,6 +26,12 @@
         }
     }
 
+    &__bouton{
+        @include button($color: $white, $background: $main-color, $width : 300px);
+        border-radius: 30px;
+        display: inline-grid;
+    }
+
     .item{
         width: 50vw;
         height: 200px;

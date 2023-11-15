@@ -106,27 +106,35 @@
         }
 
         &__titre{
-            width: 70%;
+            width: 80%;
             @include responsive-text(23px, 30px); 
             font-weight: 600;
             font-family: "Roboto", sans-serif;
+            @media (min-width: 400px) {
+                width: 70%;
+            }
         }
 
         &__texte{
             margin-top: 30px;
-            width: 60%;
+            width: 90%;
+            z-index: 4;
+            display: block; 
             @include responsive-text(16px, 20px); 
-            &::after{
-                content:''; 
-                width: 200px;
-                height: 200px;
-                display: block;
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: right bottom;
-                position: absolute;
-                right: 0;
-                bottom: 0;
+            @media (min-width: 400px) {
+                width: 60%;
+                &::after{
+                    content:''; 
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    background-position: right bottom;
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                }
             }
         }
     }

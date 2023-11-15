@@ -1,2 +1,7 @@
 @import 'src/styles/_variables.scss';
 @import 'src/styles/_mixin.scss';
+
+
+.benefits{
+    @include generale_container_benefits();
+}
