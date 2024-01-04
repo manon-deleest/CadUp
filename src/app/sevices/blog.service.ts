@@ -20,12 +20,14 @@ export class BlogService {
     getDocs(this.queryDate).then((docs) => {
       docs.docs.forEach((doc) => {
         let blog : Blog = Blog.fromFirebase(doc);
+        console.log(blog); 
         if(blog.created_at < this.startOfDay){
           blogs.push(blog);
         }
       });
     });
 
+    console.log(blogs);
     return blogs;
   }
 
@@ -35,7 +37,6 @@ export class BlogService {
     
     await getDoc(docRef).then((doc) => {
       blog = Blog.fromFirebase(doc);
-      console.log(blog);
       return blog;
     }); 
 
