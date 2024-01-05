@@ -20,7 +20,11 @@ export class LoadingComponent implements OnInit {
   async ngOnInit(): Promise<void> {
     // this.enregistrer(); 
     // this._router.navigate(['about'])
-    setTimeout(() => this._router.navigate(['about']), 1400); 
+    console.log(this._router); 
+    if(this._router.url != '/about') {
+      setTimeout(() => this._router.navigate(['about']), 1400); 
+    }
+    
   }
 
   // enregistrer(){
