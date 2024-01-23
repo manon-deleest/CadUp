@@ -107,7 +107,7 @@
         height: 150px;
         
         @media (min-width: 900px) {
-            height: 250px;
+            height: 200px;
         }
     }
 
@@ -118,6 +118,7 @@
     &__texte{
         @include responsive-text(18px, 33px); 
         padding: 10px 0 ;
+        line-height: 25px !important;
     }
 
 }
