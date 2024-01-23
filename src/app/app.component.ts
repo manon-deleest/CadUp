@@ -17,7 +17,7 @@ export class AppComponent {
   async ngOnInit(): Promise<void> {
     this.isLoading = true; 
     if(this.isLoading){
-      this._router.navigate(['']);
+      this._router.navigate(['loading'])
       this.isLoading = false; 
     }
      

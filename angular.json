@@ -34,6 +34,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/CaddieUp/docs",
               "budgets": [
                 {
                   "type": "initial",
@@ -43,7 +44,7 @@
                 {
                   "type": "anyComponentStyle",
                   "maximumWarning": "2kb",
-                  "maximumError": "7kb"
+                  "maximumError": "8kb"
                 }
               ],
               "fileReplacements": [

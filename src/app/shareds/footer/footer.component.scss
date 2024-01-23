@@ -31,8 +31,15 @@
     }
 
     &__image{
+        width: 80vw;
+        max-width: 200px;
+    }
+    &__header{
         width: 100vw;
         padding: 20px;
+        display: flex;    
+        align-items: center;
+        justify-content: center;
         @media (min-width: 900px) {
             padding: 30px;
             border-bottom: 2px solid $white;

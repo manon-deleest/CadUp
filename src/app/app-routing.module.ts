@@ -8,7 +8,6 @@ import { PolitiqueConfidentialiteComponent } from './pages/politique-confidentia
 import { AboutComponent } from './pages/about/about.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { FunctionalityComponent } from './pages/functionality/functionality.component';
-import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
@@ -17,6 +16,10 @@ import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 const routes: Routes = [
   {
     path:'',
+    redirectTo: 'loading',pathMatch: 'full'
+  },
+  {
+    path:'loading',
     component: LoadingComponent
   },
   {
@@ -30,10 +33,6 @@ const routes: Routes = [
   {
     path:'functionality',
     component: FunctionalityComponent
-  },
-  {
-    path:'mock-ups',
-    component: MockUpsComponent
   },
   {
     path:'blog',

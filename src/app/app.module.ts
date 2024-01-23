@@ -33,7 +33,6 @@ import { AboutComponent } from './pages/about/about.component';
 import { BenefitsComponent } from './pages/benefits/benefits.component';
 import { BlogComponent } from './pages/blog/blog.component';
 import { FunctionalityComponent } from './pages/functionality/functionality.component';
-import { MockUpsComponent } from './pages/mock-ups/mock-ups.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ContactPageComponent } from './pages/contact-page/contact-page.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
@@ -66,7 +65,6 @@ import { PreviewBlogComponent } from './shareds/preview-blog/preview-blog.compon
     BenefitsComponent,
     BlogComponent,
     FunctionalityComponent,
-    MockUpsComponent,
     ContactPageComponent,
     BlogSingleComponent,
     BlogTuileComponent,
