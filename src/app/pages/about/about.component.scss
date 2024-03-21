@@ -21,6 +21,11 @@
 .partenaire{
     @include generale_container(); 
 
+    &__sub-image{
+        @extend .partenaire__image;
+        max-width: 300px; 
+    }
+
 }
 
 .caddieUp{
