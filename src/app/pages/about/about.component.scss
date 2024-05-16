@@ -55,7 +55,7 @@
             font-size: 35px;
             width: 500px;
             color: $black;
-            background-color: $white;
+            background-color: transparent;
             padding: 0;
         }
 
@@ -201,7 +201,7 @@
     }
     &__texte{
         color: $white;
-        font-size: 16px;
+        font-size: 18px;
         max-width: 700px;
         padding: 50px 30px;
     }

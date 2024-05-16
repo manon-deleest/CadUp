@@ -2,7 +2,7 @@
     <p class="blog__mot-cle">
         <strong *ngFor="let mot of blog.mots_cles">{{mot}}</strong>
     </p>
-    <h2 class="blog__titre">{{blog.title}}</h2>
+    <h1 class="blog__titre">{{blog.title}}</h1>
     <span class="blog__info">Publié le <strong class="blog__date">{{blog.created_at |  date:'dd/MM/YYYY'}}</strong></span>
 
     <section class="blog__contain blog__contain--texte">

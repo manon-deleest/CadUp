@@ -2,7 +2,7 @@
     <h3 class="newletter__titre">Rejoignez notre Newsletter</h3>
     <section *ngIf="form" [formGroup]="form"  class="newletter__form">
         <label class="form-input"> <span class="form-input__label">Email</span>
-            <input  value="" name="email" formControlName="email" id="email" type="email" placeholder="Email" class="form-input__input">
+            <input  value="" name="email" formControlName="email" id="email_newsletter" type="email" placeholder="Email" class="form-input__input">
         </label>
         <p *ngIf="form.get('email')?.hasError('required') && isSubmited"  class="form-input__error">Veuillez renseigner le champ</p>
         <button type="submit" (click)="saveData()" class="newletter__button">Valider</button>

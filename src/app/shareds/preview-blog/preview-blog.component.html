@@ -1,6 +1,6 @@
 
 <section class="other-blog" *ngIf="blogs.length > 0">
-    <h4 class="other-blog__titre">{{title}} </h4>
+    <h2 class="other-blog__titre">{{title}} </h2>
     <ul class="other-blog__liste">
         <li *ngFor="let blog of blogs" class="other-blog__item">
             <app-blog-tuile [blog]="blog"></app-blog-tuile>

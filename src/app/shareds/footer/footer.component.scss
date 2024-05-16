@@ -48,9 +48,9 @@
 
     &__item{
         color: $white;
-        @include responsive-text(14px, 18px); 
+        @include responsive-text(16px, 18px); 
         padding: 9px;  
-        height: 5px;
+        height: 15px;
         display: flex;
         align-items: center;
         @media (min-width: 900px) {
