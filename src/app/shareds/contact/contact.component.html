@@ -1,6 +1,6 @@
 <section class="main">
     <h3 class="main__titre">Prenez contact ! </h3>
-    <p class="main__texte">Vous avez une question ? Vous souhaitez en savoir plus sur nos caddies connectés ? Vous souhaitez nous faire part de vos commentaires ? N’hésitez pas à nous contacter, nous serons ravis de vous répondre !</p>
+    <p class="main__texte">Vous avez une question ? Vous souhaitez en savoir plus sur nos chariots connectés ? Vous souhaitez nous faire part de vos commentaires ? N’hésitez pas à nous contacter, nous serons ravis de vous répondre !</p>
     
     <div class="contact__container" *ngIf="form">
         <form class="contact" [formGroup]="form" (ngSubmit)="onSend()">
@@ -22,7 +22,7 @@
             </label>
             <label class="form-input--checkbox">
                 <input  value="" name="checkbox" formControlName="checkbox" id="checkbox" type="checkbox">
-                En cochant cette case vous acceptez d être recontacté par l'équipe de CaddieUp. <br>
+                En cochant cette case vous acceptez d être recontacté par l'équipe de CadUp. <br>
                 Les données sont conservées pour la bonne gestion du projet mais ne sont pas transmises à tiers.
                 <p *ngIf="form.get('checkbox')?.hasError('required') && isSubmited"  class="form-input__error">Vous devez accepter les conditions</p>
             </label>
